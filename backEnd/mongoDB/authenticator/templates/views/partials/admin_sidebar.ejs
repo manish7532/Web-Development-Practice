@@ -1,0 +1,47 @@
+<aside id="sidebar" class="js-sidebar">
+    <!-- Content For Sidebar -->
+    <div class="h-100">
+        <div class="sidebar-logo">
+            <a> Hello, <%= tUser.firstname %></a>
+        </div>
+        <ul class="sidebar-nav">
+            <% if(tUser.role=='admin' ){ %>
+                <li class="sidebar-header">
+                    Admin Elements
+                </li>
+                <li id="usersidebar" class="sidebar-item">
+                    <a href="/secret" class="sidebar-link collapsed" aria-expanded="false"><i
+                            class="fa-solid fa-file-lines pe-2"></i>
+                        User Details
+                    </a>
+
+                </li>
+                <% } else{ %>
+                    <li class="sidebar-header">
+                        User Elements
+                    </li>
+                    <% } %>
+                        <li class="sidebar-item">
+                            <a href="/products" class="sidebar-link collapsed" aria-expanded="false"><i
+                                    class="fa-solid fa-sliders pe-2"></i>
+                                Products
+                            </a>
+
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+                                aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
+                                Region
+                            </a>
+                            <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                <li class="sidebar-item">
+                                    <a href="/state" class="sidebar-link">State</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="/city" class="sidebar-link">City</a>
+                                </li>
+                            </ul>
+                        </li>
+        </ul>
+    </div>
+</aside>

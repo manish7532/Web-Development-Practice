@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        #error {
+            color: rgb(243, 74, 74);
+        }
+
+        #search {
+            border: .5px solid rgba(0, 0, 0, 0.267);
+            border-radius: .5cap;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container d-flex justify-content-center mt-3">
+        <form action="/ToDo" method="post" class="w-75 form-control pb-3 col-lg-12 col-md-12 col-sm-12">
+            <h1>To Do List</h1>
+            <input type="text" class="form-control" name="item1" id="inpItem"><br>
+            <input type="submit" id="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+
+
+    <div class="container d-flex justify-content-center mt-3">
+        <ul class="form-control table table-striped w-75">
+            <% if(items.length> 0) { %>
+                <% items.forEach(item=> { %>
+                    <li class="d-flex">
+                        <div class="col-6">
+                            <%= item.item %>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <form action="/deleteOne" method="post">
+                                <input type="hidden" name="itemID" value="<%= item._id%>">
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </div>
+                    </li>
+                    <hr>
+                    <% }) %>
+                        <% } else { %>
+                            <li>No items found</li>
+                            <% } %>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

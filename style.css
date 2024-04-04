@@ -1,0 +1,27 @@
+body {
+  margin:0%;
+  font-family: "Courier", sans-serif;
+  background-color: rgb(54, 54, 60);
+  color: #fff;
+  display: grid;
+  justify-content: center;
+}
+
+h1 {
+  color: #fff;
+}
+
+p {
+  color: #fff;
+}
+
+div {
+background-color: rgb(103, 96, 206);
+width: 213px;
+height:auto;
+border-radius: 3%;
+}
+
+div p {
+  margin: 10px 10px;
+}

@@ -1,0 +1,91 @@
+Collections:
+1.	Users:
+	_id (ObjectId): 
+	email (string): unique
+	password (string): Hashed password 
+	firstName (string)
+	lastName (string)
+	profilePicture (string): URL/path/imgName
+	role (string): ("host", "attendee", "admin").
+
+
+2.	Events:
+	_id (ObjectId)  // auto generated
+	title (string)
+	description (string)
+	startDate (date) 
+	endDate (date)
+	duration (number):in minutes
+	organizerId (ObjectId)
+	participantLimit (number)
+	privacy (string): Privacy settings (e.g., "public", "private", password-protected).
+	password (string): password-protected events (optional).
+
+
+3.	Registrations:
+	_id (ObjectId)    // auto generated
+	eventId (ObjectId): Reference to the associated event.
+	userId (ObjectId): Reference to the registered user (if required).
+	email (string): Email address of the registrant 
+	registeredAt (date): Timestamp of registration.
+
+
+4.	Attendance:
+	_id (ObjectId)   // auto generated
+	eventId (ObjectId): Reference to the associated event.
+	userId (ObjectId): Reference to the attendee (if logged in).
+	joinedAt (date): Timestamp of when the attendee joined the webinar.
+	leftAt (date): Timestamp of when the attendee left the webinar (optional).
+
+
+5.	Recordings:
+	_id (ObjectId)    // auto generated
+	eventId (ObjectId): Reference to the associated event.
+	url (string): URL or reference to the recorded video file.
+	recordedAt (date): Timestamp of when the recording started.
+
+
+
+
+
+
+
+
+Users Collection
+--------------------------------------------------------------
+| _id          | firstName | lastName  | email     | password | 
+--------------------------------------------------------------
+| ObjectId     | string    | string    | string    | string   |
+--------------------------------------------------------------
+
+
+Events Collection                                                                 //privacy (e.g., "public", "private", password-protected)
+--------------------------------------------------------------------------------------------------------------------------------------
+| _id          | title    | description | startDate   | endDate     | duration | organizerId  | participantLimit | privacy | password |
+---------------------------------------------------------------------------------------------------------------------------------------
+| ObjectId     | string   | string      | date        | date        | number   | ObjectId(Ref)| number           | string  | string   |
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+Registrations Collection
+-----------------------------------------------------------------------
+| _id          | eventId      | userId       | email   | registeredAt |
+-----------------------------------------------------------------------
+| ObjectId     | ObjectId(Ref)| ObjectId(Ref)| string  | date         |
+-----------------------------------------------------------------------
+
+
+Attendance Collection
+-----------------------------------------------------------------------
+| _id          | eventId     | userId    |  joinedAt    | leftAt      |
+-----------------------------------------------------------------------
+| ObjectId     | ObjectId    | ObjectId  |  date        | date        |
+-----------------------------------------------------------------------
+
+
+Recordings Collection
+--------------------------------------------------------
+| _id          | eventId       | url       | recordedAt |
+--------------------------------------------------------
+| ObjectId     | ObjectId      | string    | date       |
+--------------------------------------------------------

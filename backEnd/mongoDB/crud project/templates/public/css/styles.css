@@ -1,0 +1,30 @@
+#nav{
+    background-color: rgb(80, 80, 227);
+}
+
+#tbody{
+    background-color: rgb(113, 113, 137);
+}
+
+table{
+    border: none;
+}
+
+#error{
+    
+    color: red;
+    /* visibility: hidden; */
+}
+
+#form{
+    display: flex;
+}
+
+
+@media 
+only screen and (max-width : 991px),
+(min-device-width: 320px) and (max-device-width: 991px){
+    #form{
+        display: block;
+    }
+}

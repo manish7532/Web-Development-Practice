@@ -1,0 +1,88 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.container {
+    height: 100%;
+    background-color: rgb(72, 92, 156);
+    overflow-x: hidden;
+}
+
+ 
+.left{
+    height: 100%;
+    width: 55%;
+    float: left;
+    color: white;
+}
+
+span{
+    font-size: 20px;
+    font-weight: bold;
+ }
+
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+strong{
+    color: red;
+}
+
+img,a {
+    margin-top: 1%;
+    margin-left: 13%;
+    width: 145px;
+    height: 72.5px;
+    color: aqua;
+}
+
+
+
+.right {
+    float: right;
+    margin-top: 1.5%;
+    margin-right: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-block-end:8% ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2%;
+    box-shadow: 0 0 4rem black;
+}
+
+input,label,textarea{
+    margin-top: 4%;
+}
+#submit {
+    width: 95%;
+    height:35px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(76, 103, 177);
+    border-radius: 1cap;
+    box-shadow: 0 0 3rem black;
+    color: rgb(76, 103, 177);
+    transition: 500ms all ease;
+}
+
+#submit:hover{
+    background-color: rgb(60, 73, 115);
+    color: white;
+    width: 97%;
+    height:40px;
+}
+
+#submit:active{
+    background-color: rgb(96, 117, 188);
+}
+
+
+/* 
+Box Shadow : 
+Two, three, or four <length> values.
+If only two values are given, they are interpreted as <offset-x> and <offset-y> values.
+If a third value is given, it is interpreted as a <blur-radius>.
+If a fourth value is given, it is interpreted as a <spread-radius> */

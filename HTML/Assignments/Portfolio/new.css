@@ -1,0 +1,74 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.navItems a {
+    text-decoration: none;
+    color: black;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.btn1, .btn2, .btn3, .btn4 {
+    background-color: #f8f9fa;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .navBar {
+        flex-direction: column;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .btn1, .btn2, .btn3, .btn4 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

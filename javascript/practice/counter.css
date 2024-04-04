@@ -1,0 +1,32 @@
+#cnt {
+    display: block;
+    text-align: center;
+    font-size: 10rem;
+    font-family: Helvetica;
+}
+
+#btnContainer {
+    text-align: center;
+}
+
+.btn {
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(143, 135, 255);
+    border-color: rgb(96, 45, 176);
+    border-radius: 8px;
+    transition: 250ms all ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    padding: 8px 16px;
+    font-size: 1.3rem;
+    background-color: rgb(100, 89, 250);
+}
+
+body{
+    background-color: rgb(56, 55, 69);
+    color: white;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Corner</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container mt-5 ">
+
+    <div id="error" class="mt-1" style="color: red;"></div>
+    <form action="" id="orderForm">
+      <h2>Food Center</h2>
+      <div class="from-group">
+        <label for="" class="form-label">First Name</label>
+        <input type="text" class="form-control" name="firstname" id="firstName"><br>
+      </div>
+
+      <div class="from-group">
+        <label for="" class="form-label">Last Name</label>
+        <input type="text" class="form-control" name="lastname" id="lastName"><br>
+      </div>
+
+      <label for="">
+        <h4 style="color: blueviolet;">Product List</h4>
+      </label><br>
+
+      <div id="foodRows">
+        <div class="form-row">
+
+          <div class="form-group col-md-4">
+            <label for="food">Food</label>
+            <select class="form-control food" name="food" required> <!-- burger is 59 rs & Pizza is 149 rs -->
+              <option disabled selected>Choose your snack</option>
+              <option value="burger">Burger</option>
+              <option value="pizza">Pizza</option>
+              <option value="fries">Fries</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control quantity" name="quantity" min="0">
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="price">Price</label>
+            <input type="text" class="form-control price" name="price" readonly>
+            <!-- shows price of selected one item & field is only readable -->
+          </div>
+
+          <div class="form-group col-md-2">
+            <button type="button" class="btn btn-success addRow mt-4">+</button>
+            <!-- should add new row for selecting another food item  -->
+            <button type="button" class="btn btn-danger removeRow mt-4">-</button>
+            <!-- should remove the current food item -->
+          </div>
+
+        </div>
+      </div>
+
+      <input type="submit" class="btn btn-primary mt-3" id="createBill" value="Create Bill">
+
+
+      <!-- Modal Button -->
+      <button type="button" class="btn btn-secondary mt-3" id="clearForm" data-toggle="modal"
+        data-target="#clearModal">Clear</button>
+      <button type="reset" style="display: none;" id="reset"></button>
+
+      <!-- clear Modal -->
+      <div class="modal fade" id="clearModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="clearModalLabel">Are you sure you want to clear all info?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-footer text-center justify-content-center">
+              <button type="button" class="btn btn-secondary " data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger " id="clear" data-dismiss="modal">Clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+
+    <div id="billResult" class="mt-5"></div>
+
+  </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
