@@ -1,4 +1,4 @@
-# Project Title
+# Repsitory Title
 
 This is a practice repository for learning Node.js, Express.js, MongoDB, React.js, Bootstrap, HTML, CSS, and JavaScript.
 
