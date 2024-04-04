@@ -1,6 +1,6 @@
 # Project Title
 
-This project is a practice repository for learning Node.js, Express.js, MongoDB, React.js, Bootstrap, HTML, CSS, and JavaScript.
+This is a practice repository for learning Node.js, Express.js, MongoDB, React.js, Bootstrap, HTML, CSS, and JavaScript.
 
 ## Overview
 
